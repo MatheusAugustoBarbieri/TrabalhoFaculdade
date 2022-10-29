@@ -49,7 +49,8 @@
         height: 45px;
         border: none;
         border-radius: 5px;
-        padding: 0;
+        padding: 0 25px 0 25px;
+        box-sizing: border-box;
       }
       form button {
         border: none;
@@ -66,10 +67,13 @@
       form button:hover {
         transform: scale(1.02);
       }
+      .cancelar {
+        background-color: red;
+      }
     </style>
   </head>
   <body>
-    <form onsubmit="verifyDates(event)">
+    <form action="/boas-vindas" method="POST">
       <div class="title">Entre em sua conta:</div>
 
       <div class="box-input">
@@ -92,8 +96,8 @@
           required
         />
       </div>
-
-      <button>Entrar</button>
+      <button type="reset" class="cancelar">Cancelar</button>
+      <button type="submit">Entrar</button>
     </form>
     <script>
       function verifyDates(e) {
