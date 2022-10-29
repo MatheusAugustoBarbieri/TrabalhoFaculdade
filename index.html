@@ -99,21 +99,5 @@
       <button type="reset" class="cancelar">Cancelar</button>
       <button type="submit">Entrar</button>
     </form>
-    <script>
-      function verifyDates(e) {
-        e.preventDefault();
-        const login = document.getElementById("login").value;
-        const senha = document.getElementById("senha").value;
-        const valid_login = typeof login === "string" && login.length > 1;
-        const valid_senha = senha.length > 1;
-
-        if (valid_login && valid_senha) {
-          window.alert("Login realizado com sucesso!");
-          window.location.reload();
-        } else {
-          window.alert("Insira os dados corretamente.");
-        }
-      }
-    </script>
   </body>
 </html>
